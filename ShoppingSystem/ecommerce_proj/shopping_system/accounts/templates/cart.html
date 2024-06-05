@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px; /* Adjusted max-width */
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #009688;
+        }
+        .product-cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Changed to flex-start */
+            margin: 0 -10px; /* Added negative margin to compensate for spacing */
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+            width: calc(16.666% - 20px); /* Adjusted width for 6 cards in a row */
+            margin-right: 20px;
+            margin-left: 10px; /* Added margin to compensate for spacing */
+        }
+        .product-card:last-child {
+            margin-right: 0;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+        .product-details {
+            padding: 20px;
+        }
+        .product-name {
+            font-size: 1em; /* Adjusted font size */
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 0.8em; /* Adjusted font size */
+            color: #009688;
+            margin-bottom: 10px;
+        }
+        .total-price {
+            font-size: 0.8em; /* Adjusted font size */
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .btn-remove {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
+            padding: 8px 12px; /* Adjusted padding */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn-remove:hover {
+            background-color: #d32f2f;
+        }
+        .btn-continue {
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            padding: 8px 12px; /* Adjusted padding */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .btn-continue:hover {
+            background-color: #00796b;
+        }
+        .btn-checkout {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 8px 12px; /* Adjusted padding */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-checkout:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Shopping Cart</h1>
+        <div class="product-cards-container">
+            {% for cart_item in cart_items %}
+            <div class="product-card">
+                <img src="{{ cart_item.product.image.url }}" alt="{{ cart_item.product.name }}" class="product-image">
+                <div class="product-details">
+                    <div class="product-name">{{ cart_item.product.name }}</div>
+                    <div class="product-price">${{ cart_item.product.price }}</div>
+                    <div>Quantity: {{ cart_item.quantity }}</div>
+                    <div class="total-price">Total Price: ${{ cart_item.total_price }}</div>
+                    <button class="btn-remove" data-product-id="{{ cart_item.product.id }}">Remove</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div>
+            <a href="{% url 'product_list' %}" class="btn-continue">Continue Shopping</a>
+            <a href="{% url 'checkout' %}" class="btn-checkout">Checkout - Total: ${{ total_price }}</a>
+        </div>
+    </div>
+
+    <script>
+        const removeButtons = document.querySelectorAll('.btn-remove');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.getAttribute('data-product-id');
+                window.location.href = `/remove_product/${productId}/`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e9e6ec, #d1e8ee);
+        }
+
+      
+        .navigation {
+            background: linear-gradient(135deg, #9555c0, #58d1cd);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navigation ul li {
+            margin-right: 10px;
+        }
+
+        .navigation ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .search-form {
+            flex-grow: 1;
+            text-align: center;
+            width: 300px;
+        }
+
+        .search-input {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 50%;
+        }
+
+        .search-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Product Card */
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 8px;
+            margin: 8px;
+            width: calc(16.66% - 16px);
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .product-name {
+            font-size: 1.2em;
+            margin: 8px 0;
+            color: #333;
+        }
+
+        .product-description {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .product-price {
+            font-size: 1.2em;
+            margin: 8px 0;
+            color: #000;
+        }
+
+        .product-rate {
+            font-size: 1em;
+            color: #888;
+        }
+
+        .product-message {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .add-to-cart-button {
+            display: block;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #218838;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li><a href="{% url 'home' %}"><i class="fas fa-home"></i> Go to Home</a></li>
+            <li><a href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            <li><a href="{% url 'view_logs' %}"><i class="fas fa-list-alt"></i> View Logs</a></li>
+            <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            
+        </ul>
+        <div class="search-form">
+            <form action="#" method="get">
+                <input type="text" name="search" placeholder="Search by name" class="search-input">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="top-message">
+      <h1> Browse our available products</h1>
+      <div>
+        {% if product_added %}
+    <script>
+        window.onload = function() {
+            alert('Product added to cart successfully!');
+        }
+    </script>
+{% endif %}
+      </div>
+    </div>
+    <div class="product-container">
+        {% if products %}
+            {% for product in products %}
+                <div class="product-card">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+                    {% endif %}
+                    <div class="product-name">{{ product.name }}</div>
+                    <div class="product-description">{{ product.description }}</div>
+                    <div class="product-price">${{ product.price }}</div>
+                    <div class="product-rate">Rating: {{ product.rate }}</div>
+                    <form action="{% url 'add_to_cart' product.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                    </form>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="empty-message">
+                No products available.
+            </div>
+        {% endif %}
+    </div>
+    
+</body>
+</html>

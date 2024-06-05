@@ -1,0 +1,416 @@
+INFO 2024-05-28 15:55:23,117 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 15:56:13,327 autoreload C:\Users\San\Desktop\shopping_system\shopping_system\accounts\views.py changed, reloading.
+INFO 2024-05-28 15:56:14,616 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 15:56:26,095 autoreload C:\Users\San\Desktop\shopping_system\shopping_system\accounts\views.py changed, reloading.
+INFO 2024-05-28 15:56:27,224 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 15:56:57,523 basehttp "GET /product_list/ HTTP/1.1" 200 5776
+INFO 2024-05-28 15:56:57,622 basehttp "GET /media/products/20210914_105548.jpg HTTP/1.1" 304 0
+WARNING 2024-05-28 15:56:57,648 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 15:56:57,658 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4642
+INFO 2024-05-28 15:57:59,514 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 15:57:59,594 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 15:57:59,595 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4642
+INFO 2024-05-28 15:58:00,944 basehttp "GET /view_logs/ HTTP/1.1" 200 1455
+INFO 2024-05-28 15:59:25,165 basehttp "GET / HTTP/1.1" 200 1864
+INFO 2024-05-28 15:59:27,377 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 15:59:30,422 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 15:59:30,438 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 15:59:30,522 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 15:59:30,523 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4642
+INFO 2024-05-28 15:59:35,221 basehttp "GET /cart/ HTTP/1.1" 200 5177
+WARNING 2024-05-28 15:59:35,306 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 15:59:35,307 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4642
+INFO 2024-05-28 15:59:41,461 basehttp "GET /remove_product/1/ HTTP/1.1" 302 0
+INFO 2024-05-28 15:59:41,480 basehttp "GET /cart/ HTTP/1.1" 200 4611
+INFO 2024-05-28 15:59:45,045 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 15:59:45,169 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 15:59:45,170 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4642
+INFO 2024-05-28 15:59:47,644 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 15:59:47,724 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 15:59:47,725 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4642
+INFO 2024-05-28 15:59:55,157 basehttp "POST /add_to_cart/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 15:59:55,523 basehttp "GET /product_list/ HTTP/1.1" 200 5919
+WARNING 2024-05-28 15:59:55,619 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 15:59:55,620 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4642
+INFO 2024-05-28 15:59:59,248 basehttp "GET /view_logs/ HTTP/1.1" 200 3441
+INFO 2024-05-28 16:00:05,993 basehttp "GET /cart/ HTTP/1.1" 200 4611
+INFO 2024-05-28 16:00:11,554 basehttp "GET /checkout/ HTTP/1.1" 200 1574
+INFO 2024-05-28 16:01:27,525 autoreload C:\Users\San\Desktop\shopping_system\shopping_system\accounts\views.py changed, reloading.
+INFO 2024-05-28 16:01:29,241 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 16:02:10,087 autoreload C:\Users\San\Desktop\shopping_system\shopping_system\accounts\urls.py changed, reloading.
+INFO 2024-05-28 16:02:11,362 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 16:03:29,996 basehttp "GET /checkout/ HTTP/1.1" 200 1581
+ERROR 2024-05-28 16:03:31,433 log Internal Server Error: /payment_process/
+Traceback (most recent call last):
+  File "C:\Users\San\Desktop\shopping_system\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\San\Desktop\shopping_system\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\San\Desktop\shopping_system\shopping_system\accounts\views.py", line 157, in payment_process
+    return redirect(reverse('payment_success'))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\San\Desktop\shopping_system\env\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\San\Desktop\shopping_system\env\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'payment_success' not found. 'payment_success' is not a valid view function or pattern name.
+ERROR 2024-05-28 16:03:31,436 basehttp "POST /payment_process/ HTTP/1.1" 500 78284
+INFO 2024-05-28 16:06:55,427 autoreload C:\Users\San\Desktop\shopping_system\shopping_system\accounts\views.py changed, reloading.
+INFO 2024-05-28 16:06:56,598 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 16:07:03,247 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:07:03,286 basehttp "GET /payment_process/ HTTP/1.1" 200 793
+INFO 2024-05-28 16:07:13,257 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:07:13,267 basehttp "GET /payment_process/ HTTP/1.1" 200 793
+INFO 2024-05-28 16:08:15,024 basehttp "GET /payment_process/ HTTP/1.1" 200 4596
+INFO 2024-05-28 16:08:25,098 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:08:25,119 basehttp "GET /payment_process/ HTTP/1.1" 200 889
+INFO 2024-05-28 16:08:28,101 basehttp "GET /payment_process/ HTTP/1.1" 200 793
+INFO 2024-05-28 16:08:34,634 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:08:34,645 basehttp "GET /payment_process/ HTTP/1.1" 200 889
+INFO 2024-05-28 16:10:34,804 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:10:38,315 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:10:38,326 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:10:46,451 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:10:47,977 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:10:47,994 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:10:50,938 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:10:57,472 basehttp "GET /cart/ HTTP/1.1" 200 4611
+INFO 2024-05-28 16:11:00,510 basehttp "GET /checkout/ HTTP/1.1" 200 1581
+INFO 2024-05-28 16:11:07,079 basehttp "GET /checkout/ HTTP/1.1" 200 1581
+INFO 2024-05-28 16:11:08,267 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:11:08,278 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:11:16,728 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:11:16,739 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:11:19,586 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:11:21,126 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+INFO 2024-05-28 16:11:23,681 basehttp "POST /add_to_cart/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:11:23,849 basehttp "GET /product_list/ HTTP/1.1" 200 5919
+WARNING 2024-05-28 16:11:23,953 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:11:23,954 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:11:26,993 basehttp "GET /cart/ HTTP/1.1" 200 4611
+INFO 2024-05-28 16:11:37,589 basehttp "POST /add_to_cart/1/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:11:37,607 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:11:37,705 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:11:37,705 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:11:39,789 basehttp "GET /cart/ HTTP/1.1" 200 5176
+WARNING 2024-05-28 16:11:39,884 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:11:39,885 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:11:43,374 basehttp "GET /checkout/ HTTP/1.1" 200 1581
+INFO 2024-05-28 16:12:15,286 basehttp "GET /checkout/ HTTP/1.1" 200 1507
+INFO 2024-05-28 16:12:17,966 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:12:17,979 basehttp "GET /payment_process/ HTTP/1.1" 200 2671
+INFO 2024-05-28 16:12:20,580 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:12:25,635 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:12:25,647 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:12:27,564 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:12:35,582 basehttp "GET /checkout/ HTTP/1.1" 200 1507
+INFO 2024-05-28 16:12:46,809 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:12:46,914 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:12:46,915 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:12:49,349 basehttp "GET / HTTP/1.1" 200 1864
+INFO 2024-05-28 16:12:51,626 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:12:54,576 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:12:54,592 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:12:54,680 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:12:54,680 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:12:56,428 basehttp "GET /logout/ HTTP/1.1" 200 1193
+INFO 2024-05-28 16:12:58,459 basehttp "POST / HTTP/1.1" 200 1864
+INFO 2024-05-28 16:13:00,103 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:13:02,934 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:13:02,951 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:13:03,040 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:13:03,041 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:13:11,178 basehttp "POST /add_to_cart/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:13:11,321 basehttp "GET /product_list/ HTTP/1.1" 200 5919
+WARNING 2024-05-28 16:13:11,410 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:13:11,411 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:13:14,830 basehttp "GET /view_logs/ HTTP/1.1" 200 11875
+INFO 2024-05-28 16:13:28,629 basehttp "GET /view_logs/ HTTP/1.1" 200 11960
+INFO 2024-05-28 16:13:32,907 basehttp "GET /view_logs/ HTTP/1.1" 200 12045
+INFO 2024-05-28 16:13:39,800 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:13:39,878 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:13:39,879 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:13:40,982 basehttp "GET /logout/ HTTP/1.1" 200 1193
+INFO 2024-05-28 16:13:42,237 basehttp "POST / HTTP/1.1" 200 1864
+INFO 2024-05-28 16:14:20,946 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:14:25,237 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:14:25,254 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:14:25,354 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:14:25,355 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:14:30,570 basehttp "GET /logout/ HTTP/1.1" 200 1193
+INFO 2024-05-28 16:14:37,594 basehttp "POST / HTTP/1.1" 200 1864
+INFO 2024-05-28 16:15:03,436 basehttp "POST / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:15:28,749 basehttp "POST / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:15:30,061 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:15:32,696 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:15:32,714 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:15:32,798 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:15:32,799 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:15:34,805 basehttp "GET /logout/ HTTP/1.1" 200 1531
+INFO 2024-05-28 16:15:41,267 basehttp "POST / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:15:43,762 basehttp "GET /signup/ HTTP/1.1" 200 2871
+INFO 2024-05-28 16:15:48,583 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:15:51,801 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:15:51,818 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:15:51,936 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:15:51,937 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:15:55,801 basehttp "GET /cart/ HTTP/1.1" 200 5177
+WARNING 2024-05-28 16:15:55,900 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:15:55,901 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:16:05,449 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:16:09,923 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:16:11,989 basehttp "GET /signup/ HTTP/1.1" 200 2871
+INFO 2024-05-28 16:16:32,610 basehttp "GET /cart/ HTTP/1.1" 200 5177
+WARNING 2024-05-28 16:16:32,712 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:16:32,713 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:16:34,852 basehttp "GET /product_list/ HTTP/1.1" 200 5786
+WARNING 2024-05-28 16:16:34,957 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:16:34,958 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:17:18,970 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:17:19,054 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:17:19,054 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:17:29,772 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:17:31,957 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:17:35,040 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:17:35,057 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:17:35,147 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:17:35,148 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:17:36,944 basehttp "GET /view_logs/ HTTP/1.1" 200 16313
+INFO 2024-05-28 16:17:40,976 basehttp "GET /logout/ HTTP/1.1" 200 1531
+INFO 2024-05-28 16:17:42,829 basehttp "POST / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:17:45,023 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:17:47,759 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:17:47,774 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:17:47,872 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:17:47,873 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:17:51,599 basehttp "GET /cart/ HTTP/1.1" 200 5177
+WARNING 2024-05-28 16:17:51,701 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:17:51,702 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:17:53,809 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:17:53,931 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:17:53,932 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:17:56,370 basehttp "POST /add_to_cart/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:17:56,515 basehttp "GET /product_list/ HTTP/1.1" 200 5925
+WARNING 2024-05-28 16:17:56,629 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:17:56,630 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:18:00,321 basehttp "GET /cart/ HTTP/1.1" 200 5177
+WARNING 2024-05-28 16:18:00,421 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:18:00,422 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:18:02,820 basehttp "GET /remove_product/1/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:18:02,838 basehttp "GET /cart/ HTTP/1.1" 200 4612
+INFO 2024-05-28 16:18:04,493 basehttp "GET /checkout/ HTTP/1.1" 200 1507
+INFO 2024-05-28 16:18:06,904 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:18:06,922 basehttp "GET /payment_process/ HTTP/1.1" 200 2676
+INFO 2024-05-28 16:18:09,590 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:18:14,860 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:18:14,872 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:18:16,976 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:18:22,253 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:18:22,264 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:18:30,822 basehttp "GET /remove_product/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:18:30,839 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:18:34,510 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:18:38,711 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:18:45,827 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:18:49,137 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+INFO 2024-05-28 16:18:51,613 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:18:51,899 basehttp "GET /logout/ HTTP/1.1" 200 1531
+INFO 2024-05-28 16:18:54,197 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:18:54,338 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:18:54,976 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:18:56,035 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:19:08,847 basehttp "GET /product_list/ HTTP/1.1" 302 0
+WARNING 2024-05-28 16:19:08,908 log Not Found: /accounts/login/
+WARNING 2024-05-28 16:19:08,909 basehttp "GET /accounts/login/?next=/product_list/ HTTP/1.1" 404 4547
+INFO 2024-05-28 16:19:22,846 basehttp "GET /product_list/ HTTP/1.1" 302 0
+WARNING 2024-05-28 16:19:22,862 log Not Found: /accounts/login/
+WARNING 2024-05-28 16:19:22,862 basehttp "GET /accounts/login/?next=/product_list/ HTTP/1.1" 404 4547
+INFO 2024-05-28 16:19:32,842 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:19:32,991 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:19:32,992 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:20:13,592 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:20:16,275 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:20:19,233 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:20:19,249 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+INFO 2024-05-28 16:20:19,337 basehttp "GET /media/products/20210914_105548.jpg HTTP/1.1" 304 0
+WARNING 2024-05-28 16:20:19,347 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:20:19,349 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:20:21,234 basehttp "GET /view_logs/ HTTP/1.1" 200 21564
+INFO 2024-05-28 16:20:26,316 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:20:28,406 basehttp "GET /signup/ HTTP/1.1" 200 2871
+INFO 2024-05-28 16:21:00,147 basehttp "POST /signup/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:21:00,165 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:21:00,276 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:21:00,277 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:21:07,630 basehttp "GET /view_logs/ HTTP/1.1" 200 22168
+INFO 2024-05-28 16:21:12,458 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:21:18,394 basehttp "GET /logout/ HTTP/1.1" 200 1531
+INFO 2024-05-28 16:21:20,235 basehttp "POST / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:21:21,938 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:21:25,553 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:21:25,568 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:21:25,676 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:21:25,677 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:21:28,710 basehttp "POST /add_to_cart/1/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:21:28,725 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:21:28,810 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:21:28,810 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:21:30,538 basehttp "POST /add_to_cart/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:21:30,553 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:21:30,641 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:21:30,641 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:21:32,250 basehttp "GET /cart/ HTTP/1.1" 200 5175
+WARNING 2024-05-28 16:21:32,341 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:21:32,341 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:21:37,080 basehttp "GET /logout/ HTTP/1.1" 200 1531
+INFO 2024-05-28 16:21:38,844 basehttp "POST / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:21:40,042 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:21:45,257 basehttp "POST /login/ HTTP/1.1" 200 2902
+INFO 2024-05-28 16:21:53,997 basehttp "POST /login/ HTTP/1.1" 200 2902
+INFO 2024-05-28 16:22:04,575 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:22:04,591 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:22:04,689 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:22:04,690 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:22:06,973 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:22:11,654 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:22:15,547 basehttp "POST /add_to_cart/1/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:22:15,563 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:22:15,654 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:22:15,655 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:22:16,951 basehttp "POST /add_to_cart/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:22:16,967 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:22:17,059 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:22:17,060 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:22:18,551 basehttp "GET /cart/ HTTP/1.1" 200 5175
+WARNING 2024-05-28 16:22:18,644 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:22:18,645 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:22:20,459 basehttp "GET /checkout/ HTTP/1.1" 200 1507
+INFO 2024-05-28 16:22:22,233 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:22:22,248 basehttp "GET /payment_process/ HTTP/1.1" 200 2906
+INFO 2024-05-28 16:22:27,100 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:22:36,529 basehttp "GET /product_list/ HTTP/1.1" 200 5792
+WARNING 2024-05-28 16:22:36,635 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:22:36,636 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:22:38,297 basehttp "POST /add_to_cart/1/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:22:38,474 basehttp "GET /product_list/ HTTP/1.1" 200 5925
+WARNING 2024-05-28 16:22:38,553 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:22:38,554 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:22:41,997 basehttp "POST /add_to_cart/2/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:22:42,141 basehttp "GET /product_list/ HTTP/1.1" 200 5925
+WARNING 2024-05-28 16:22:42,246 log Not Found: /media/products/20210914_105548_2.jpg
+WARNING 2024-05-28 16:22:42,247 basehttp "GET /media/products/20210914_105548_2.jpg HTTP/1.1" 404 4829
+INFO 2024-05-28 16:22:46,900 basehttp "GET /view_logs/ HTTP/1.1" 200 27266
+INFO 2024-05-28 16:26:14,073 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:26:27,693 basehttp "GET /admin/ HTTP/1.1" 200 6765
+INFO 2024-05-28 16:26:28,035 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,041 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,048 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,049 basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,050 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,150 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,151 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,254 basehttp "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,254 basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:28,255 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,337 basehttp "GET /admin/accounts/product/ HTTP/1.1" 200 8729
+INFO 2024-05-28 16:26:31,415 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,415 basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,416 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,422 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,426 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,427 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,434 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,434 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,435 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,441 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 16:26:31,505 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:31,568 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:45,369 basehttp "GET /admin/accounts/product/2/change/ HTTP/1.1" 200 10964
+INFO 2024-05-28 16:26:45,435 basehttp "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:45,441 basehttp "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:45,446 basehttp "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:45,453 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 16:26:45,454 basehttp "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2024-05-28 16:26:49,770 basehttp "GET /admin/accounts/product/2/delete/ HTTP/1.1" 200 7333
+INFO 2024-05-28 16:26:49,970 basehttp "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2024-05-28 16:26:51,561 basehttp "POST /admin/accounts/product/2/delete/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:26:51,591 basehttp "GET /admin/accounts/product/ HTTP/1.1" 200 8609
+INFO 2024-05-28 16:26:51,652 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 16:26:54,197 basehttp "GET /admin/accounts/product/1/change/ HTTP/1.1" 200 10932
+INFO 2024-05-28 16:26:54,262 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 16:26:55,884 basehttp "GET /admin/accounts/product/1/delete/ HTTP/1.1" 200 7288
+INFO 2024-05-28 16:26:57,721 basehttp "POST /admin/accounts/product/1/delete/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:26:57,747 basehttp "GET /admin/accounts/product/ HTTP/1.1" 200 7331
+INFO 2024-05-28 16:26:57,821 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 16:27:00,240 basehttp "GET /admin/accounts/product/ HTTP/1.1" 200 7173
+INFO 2024-05-28 16:27:00,298 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 16:27:11,164 basehttp "GET /product_list/?search=Based HTTP/1.1" 200 4219
+INFO 2024-05-28 16:27:15,114 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:27:16,710 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:27:19,378 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:27:19,392 basehttp "GET /product_list/ HTTP/1.1" 200 4219
+INFO 2024-05-28 16:27:21,220 basehttp "GET /logout/ HTTP/1.1" 200 1531
+INFO 2024-05-28 16:27:22,795 basehttp "POST / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:27:24,485 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:27:27,492 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:27:27,508 basehttp "GET /product_list/ HTTP/1.1" 200 4219
+INFO 2024-05-28 16:27:30,233 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:47:22,970 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 16:48:21,277 basehttp "GET /view_logs/ HTTP/1.1" 200 32673
+INFO 2024-05-28 16:48:26,343 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:48:27,831 basehttp "GET /checkout/ HTTP/1.1" 200 1688
+INFO 2024-05-28 16:48:33,501 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:48:33,519 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:48:36,012 basehttp "GET /payment_process/ HTTP/1.1" 200 2239
+INFO 2024-05-28 16:49:20,761 basehttp "GET /cart/ HTTP/1.1" 200 4025
+INFO 2024-05-28 16:49:21,850 basehttp "GET /checkout/ HTTP/1.1" 200 1688
+INFO 2024-05-28 16:49:47,722 basehttp "GET /checkout/ HTTP/1.1" 200 1688
+INFO 2024-05-28 16:50:17,803 basehttp "GET /checkout/ HTTP/1.1" 200 1689
+INFO 2024-05-28 16:50:19,443 basehttp "GET /checkout/ HTTP/1.1" 200 1689
+INFO 2024-05-28 16:50:26,184 basehttp "GET /checkout/ HTTP/1.1" 200 1689
+INFO 2024-05-28 16:50:27,016 basehttp "GET /checkout/ HTTP/1.1" 200 1689
+INFO 2024-05-28 16:50:32,012 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:50:32,026 basehttp "GET /payment_process/ HTTP/1.1" 200 2426
+INFO 2024-05-28 16:51:00,609 basehttp "GET /checkout/ HTTP/1.1" 200 1689
+INFO 2024-05-28 16:51:02,679 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:51:02,707 basehttp "GET /payment_process/ HTTP/1.1" 200 2421
+INFO 2024-05-28 16:51:10,616 basehttp "GET /checkout/ HTTP/1.1" 200 1689
+INFO 2024-05-28 16:51:15,484 basehttp "GET /checkout/ HTTP/1.1" 200 1689
+INFO 2024-05-28 16:51:17,126 basehttp "POST /payment_process/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:51:17,140 basehttp "GET /payment_process/ HTTP/1.1" 200 2421
+INFO 2024-05-28 16:51:32,912 basehttp "GET /payment_process/ HTTP/1.1" 200 2234
+INFO 2024-05-28 16:52:15,594 basehttp "GET /payment_process/ HTTP/1.1" 200 2234
+INFO 2024-05-28 16:52:25,016 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 16:52:27,290 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 16:52:30,037 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2024-05-28 16:52:30,083 basehttp "GET /product_list/ HTTP/1.1" 200 4155
+INFO 2024-05-28 16:52:36,972 basehttp "GET /login/ HTTP/1.1" 200 2743
+INFO 2024-05-28 17:06:32,300 autoreload Watching for file changes with StatReloader
+INFO 2024-05-28 17:08:53,229 basehttp "GET /admin/accounts/product/ HTTP/1.1" 200 7173
+INFO 2024-05-28 17:08:53,295 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 17:08:56,613 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 17:08:57,592 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 17:09:00,256 basehttp "GET /admin/accounts/product/ HTTP/1.1" 200 7173
+INFO 2024-05-28 17:09:00,329 basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,330 basehttp "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,342 basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,346 basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,347 basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,349 basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,349 basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,350 basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,353 basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2024-05-28 17:09:00,422 basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,424 basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,427 basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,428 basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,454 basehttp "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,461 basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,531 basehttp "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,531 basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:00,532 basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2024-05-28 17:09:03,210 basehttp "GET / HTTP/1.1" 200 1766
+INFO 2024-05-28 17:09:05,303 basehttp "GET /signup/ HTTP/1.1" 200 2871
